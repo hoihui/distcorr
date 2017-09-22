@@ -83,10 +83,10 @@ def distcov(np.ndarray[double] x,np.ndarray[double] y):
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-def distcorr(np.ndarray[double] x,np.ndarray[double] y):
-    cdef double dcovXY = distcov(x,y)
-    cdef double dcovX  = distcov(x,x)
-    cdef double dcovY  = distcov(y,y)
+def distcorr(np.ndarray x,np.ndarray y):
+    cdef double dcovXY = distcov(x.astype(np.float64),y.astype(np.float64))
+    cdef double dcovX  = distcov(x.astype(np.float64),x.astype(np.float64))
+    cdef double dcovY  = distcov(y.astype(np.float64),y.astype(np.float64))
     if np.abs(dcovX * dcovY)<1e-10:
         return 0; 
     else:
