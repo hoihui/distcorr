@@ -26,7 +26,7 @@ else:
 setup(
     name="distcorr",
     version='1',
-    description='Simple random number generators',
+    description='O(nlogn) algorithm for computing distance correlation (arXiv:1410.1503)',
     author='Hoi Hui',
     author_email='hoiyinhui@gmail.com',
     url='https://github.com/hoihui/distcorr',
