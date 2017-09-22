@@ -11,5 +11,5 @@ A python (cython) implementation of the [O(NlogN) algorithm](https://arxiv.org/a
 ```python
 import distcorr
 N=1000
-distcorr.distcorr(np.random.random(N),np.random.random(N))
+print distcorr.distcorr(np.random.random(N),np.random.random(N))
 ```
