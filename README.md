@@ -11,9 +11,14 @@ A python (cython) implementation of the [O(nlog(n)) algorithm](https://arxiv.org
 ```python
 import distcorr
 import numpy as np
-N=1000
-print distcorr.distcorr(np.random.random(N),np.random.random(N))
+N=10001
+print np.corrcoef(np.linspace(-1,1,N),np.abs(np.linspace(-1,1,N)))[0,1]
+print distcorr.distcorr(np.linspace(-1,1,N),np.abs(np.linspace(-1,1,N)))
 ```
+outputs
+`2.7276657101333544e-16
+0.49981241794312725
+`
 
 # Functions
 
