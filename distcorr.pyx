@@ -88,10 +88,11 @@ def distcov(x,y):
 def distcorr(x,y):
     x=np.asarray(x,dtype=np.float64)
     y=np.asarray(y,dtype=np.float64)
-    cdef double dcovXY = distcov(x,y)
+    cdef double dcovXY
     cdef double dcovX  = distcov(x,x)
     cdef double dcovY  = distcov(y,y)
     if np.abs(dcovX * dcovY)<1e-10:
         return 0; 
     else:
+        dcovXY = distcov(x,y)
         return np.sign(dcovXY)*sqrt(abs(dcovXY)/sqrt(dcovX*dcovY))
