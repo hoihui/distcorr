@@ -1,6 +1,6 @@
 # distcorr
 
-A python (cython) implementation of the [O(NlogN) algorithm](https://arxiv.org/abs/1410.1503) for computing the [distance correlation measure](https://projecteuclid.org/euclid.aos/1201012979).
+A python (cython) implementation of the [O(nlog(n)) algorithm](https://arxiv.org/abs/1410.1503) for computing the [distance correlation measure](https://projecteuclid.org/euclid.aos/1201012979).
 
 # Installation
 
