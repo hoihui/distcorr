@@ -11,11 +11,10 @@ A python (cython) implementation of the [O(nlog(n)) algorithm](https://arxiv.org
 ```python
 import distcorr
 import numpy as np
-N=10001
-print np.corrcoef(np.linspace(-1,1,N),np.abs(np.linspace(-1,1,N)))[0,1],\
-      distcorr.distcorr(np.linspace(-1,1,N),np.abs(np.linspace(-1,1,N)))
+v=np.linspace(-1,1,10001)
+print np.corrcoef(v,np.abs(v))[0,1], distcorr.distcorr(v,np.abs(v))
 ```
-outputs `2.72766571013e-16 0.499812417943`, demonstrating the superiority over Pearson's correlation.
+outputs `1.53431196195e-16 0.499812417943`, demonstrating the superiority over Pearson's correlation.
 
 
 # Functions
